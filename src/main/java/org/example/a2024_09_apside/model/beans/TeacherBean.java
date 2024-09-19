@@ -5,18 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//Génère à la compilation
-//-get/set
-//-equals et toString
 @Data
-@AllArgsConstructor //-constructeurs plein
-@NoArgsConstructor  //-constructeurs vide
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "message")
-public class MessageBean {
+@Table(name = "teacher") //Nom de la table que représente ce bean
+public class TeacherBean {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id; //c'est l'id est il est auto incrément
-    private String pseudo, message;
+    private String name;
+    private Integer code;
+    private String sessionId; //Ira chercher session_id dans la table
 }
