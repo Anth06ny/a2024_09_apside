@@ -1,5 +1,6 @@
 package org.example.a2024_09_apside.services;
 
+import jakarta.transaction.Transactional;
 import org.example.a2024_09_apside.model.beans.MessageBean;
 import org.example.a2024_09_apside.model.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,8 @@ public class MessageService {
 
     @Autowired
     private MessageRepository messageRepository;
+
+
 
     public List<MessageBean> get10Last() {
         return messageRepository.findFirst10ByOrderByIdDesc();

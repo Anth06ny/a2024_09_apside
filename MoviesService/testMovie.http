@@ -1,0 +1,37 @@
+//Création
+POST http://localhost:8080/authors
+Content-Type: application/json
+
+{"firstName":"toto", "lastName":"bobby"}
+
+###
+
+//GET 1
+GET http://localhost:8080/authors/1
+Content-Type: application/json
+###
+
+//Remplace
+PUT http://localhost:8080/authors/2
+Content-Type: application/json
+
+{"firstName":"blabla" , "lastName":"bobby"}
+###
+
+//Mise à jour partielle
+PATCH http://localhost:8080/authors/2
+Content-Type: application/json
+
+{"firstName":"toto"}
+###
+
+//GET All
+GET http://localhost:8080/authors
+Content-Type: application/json
+###
+
+//Suppression
+DELETE http://localhost:8080/authors/2
+Content-Type: application/json
+
+###
